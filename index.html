@@ -2,66 +2,176 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Valentine</title>
+<title>Nirjara ❤️ Anil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body{
-  background:#ffc0cb;
-  text-align:center;
-  font-family: Arial, sans-serif;
   margin:0;
-  padding:30px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  text-align:center;
+  color:white;
+  overflow-x:hidden;
+}
+
+.container{
+  padding:30px 15px;
+}
+
+h1{
+  font-size:30px;
+}
+
+p{
+  font-size:18px;
+  line-height:1.7;
 }
 
 button{
-  padding:15px 30px;
-  font-size:20px;
-  margin:10px;
-  border-radius:25px;
+  padding:14px 28px;
+  font-size:18px;
+  margin:8px;
   border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.yes{
   background:#ff4d6d;
   color:white;
 }
 
+.no{
+  background:white;
+  color:#ff4d6d;
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
 img{
-  width:80%;
-  max-width:300px;
+  width:85%;
+  max-width:320px;
   border-radius:20px;
   margin-top:20px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
-p{
+.hidden{
+  display:none;
+}
+
+/* Floating hearts */
+.heart{
+  position:fixed;
+  bottom:-10px;
   font-size:20px;
+  animation:float 6s linear infinite;
+  opacity:0.8;
+}
+
+@keyframes float{
+  0%{transform:translateY(0); opacity:1;}
+  100%{transform:translateY(-100vh); opacity:0;}
 }
 </style>
-
-<script>
-function yes(){
-  document.body.innerHTML =
-    "<h1>Happy Rose Day 🌹</h1>" +
-    "<img src='./rose.jpg' alt='Rose'>" +
-    "<p>I may not give you a real rose,<br>but I am your rose 🌹</p>" +
-    "<p><b>I love you babe ❤️</b></p>";
-}
-
-function no(){
-  document.body.innerHTML =
-    "<h1>Will you be my Valentine? 💕</h1>" +
-    "<p>Think again… my heart is waiting 💖</p>" +
-    "<button onclick='yes()'>Yes 🌹</button>" +
-    "<button onclick='no()'>No 🙈</button>";
-}
-</script>
-
 </head>
 
 <body>
 
-<h1>Will you be my Valentine? 💖</h1>
-<button onclick="yes()">Yes 🌹</button>
-<button onclick="no()">No 🙈</button>
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Komiku/Love/Komiku_-_12_-_Tenderness.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="container" id="page1">
+  <h1>Will you be my Valentine? 💖</h1>
+  <p>Anil, yo mero mutu ko sawaal ho…</p>
+  <button class="yes" onclick="yesPage()">Yes 💕</button>
+  <button class="no" onclick="no1()">No 🙈</button>
+</div>
+
+<!-- NO 1 -->
+<div class="container hidden" id="no1">
+  <h1>Sochera hera na 🥺</h1>
+  <p>Tme bina Valentine adhurai huncha…</p>
+  <button class="yes" onclick="yesPage()">Okay Yes 😘</button>
+  <button class="no" onclick="no2()">Still No 😅</button>
+</div>
+
+<!-- NO 2 -->
+<div class="container hidden" id="no2">
+  <h1>Last chance hai 😢</h1>
+  <p>Unlimited maya, care ani kisses free 💞</p>
+  <button class="yes" onclick="yesPage()">YES YES ❤️</button>
+  <button class="no" onclick="no3()">No (don’t be dramatic) 😜</button>
+</div>
+
+<!-- NO 3 -->
+<div class="container hidden" id="no3">
+  <h1>Oops… trap ma paryau 😏</h1>
+  <p>No escape now, maya jitihalcha 💘</p>
+  <button class="yes" onclick="yesPage()">Fine Yes 🥰</button>
+</div>
+
+<!-- YES PAGE -->
+<div class="container hidden" id="yesPage">
+  <h1>Happy Rose Day 🌹</h1>
+  <h2>Nirjara ❤️ Anil</h2>
+  <img src="rose.jpg" alt="Rose Day">
+  <p>
+    Ma timilai real rose dina sakdina,<br>
+    tara ma nai timro rose ho 🌹<br><br>
+    Distance le haamro haat chhutaula,<br>
+    tara mutu kaile chhutdaina 💕
+  </p>
+  <p><strong>I love you babe ❤️</strong></p>
+  <p>Forever yours, always & forever ♾️</p>
+</div>
+
+<script>
+function hideAll(){
+  document.getElementById("page1").classList.add("hidden");
+  document.getElementById("no1").classList.add("hidden");
+  document.getElementById("no2").classList.add("hidden");
+  document.getElementById("no3").classList.add("hidden");
+  document.getElementById("yesPage").classList.add("hidden");
+}
+
+function yesPage(){
+  hideAll();
+  document.getElementById("yesPage").classList.remove("hidden");
+}
+
+function no1(){
+  hideAll();
+  document.getElementById("no1").classList.remove("hidden");
+}
+
+function no2(){
+  hideAll();
+  document.getElementById("no2").classList.remove("hidden");
+}
+
+function no3(){
+  hideAll();
+  document.getElementById("no3").classList.remove("hidden");
+}
+
+/* hearts */
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*100+"vw";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},500);
+</script>
 
 </body>
 </html>
