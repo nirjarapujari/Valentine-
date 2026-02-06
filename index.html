@@ -11,15 +11,15 @@
 body{
   margin:0;
   font-family:'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
+  background: linear-gradient(135deg, #ffe4ec, #f3d9ff);
   text-align:center;
   color:#5a2a60;
   overflow-x:hidden;
 }
 
 .container{
-  padding:35px 18px;
-  animation: fadeIn 1.2s ease;
+  padding:40px 20px;
+  animation: fadeIn 1s ease;
 }
 
 h1{
@@ -30,49 +30,42 @@ h1{
 
 p{
   font-size:18px;
-  line-height:1.8;
+  line-height:1.9;
   color:#6b2f6b;
 }
 
 button{
-  padding:14px 30px;
+  padding:14px 32px;
   font-size:18px;
   margin:10px;
   border:none;
   border-radius:40px;
   cursor:pointer;
   transition:0.3s;
-  font-family:'Poppins', sans-serif;
 }
 
 .yes{
   background:#ff6fae;
   color:white;
-  box-shadow:0 8px 18px rgba(255,111,174,0.5);
+  box-shadow:0 10px 20px rgba(255,111,174,0.4);
 }
 
 .no{
   background:white;
   color:#ff6fae;
-  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
 }
 
 button:hover{
-  transform:scale(1.1);
+  transform:scale(1.08);
 }
 
 img{
   width:85%;
-  max-width:300px;
+  max-width:320px;
   border-radius:25px;
-  margin-top:20px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.25);
-}
-
-.gif{
-  width:140px;
-  margin:15px;
-  animation:bounce 2s infinite;
+  margin-top:25px;
+  box-shadow:0 14px 30px rgba(0,0,0,0.25);
 }
 
 .hidden{
@@ -97,78 +90,75 @@ img{
   from{opacity:0; transform:translateY(20px);}
   to{opacity:1; transform:translateY(0);}
 }
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-12px);}
-}
 </style>
 </head>
 
 <body>
 
-<!-- soft romantic music -->
-<audio autoplay loop>
-  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Komiku/Love/Komiku_-_12_-_Tenderness.mp3" type="audio/mpeg">
-</audio>
-
 <!-- PAGE 1 -->
 <div class="container" id="page1">
-  <img class="gif" src="https://media.tenor.com/7ZQ9p9zT6GAAAAAC/bubu-dudu-love.gif">
-  <h1>Will you be my Valentine? 💕</h1>
-  <button class="yes" onclick="yesPage()">Yes 🥰</button>
+  <h1>Will you be my Valentine? 💖</h1>
+  <p>
+    This is not just a question,<br>
+    it’s my heart quietly choosing you.
+  </p>
+  <button class="yes" onclick="yesPage()">Yes 💕</button>
   <button class="no" onclick="no1()">No 🙈</button>
 </div>
 
 <!-- NO PAGE 1 -->
 <div class="container hidden" id="no1">
-  <img class="gif" src="https://media.tenor.com/F6pC2FJ2n8YAAAAi/bubu-dudu.gif">
-  <h1>Are you really sure? 🥺</h1>
-  <p>This love is gentle… but very stubborn 💗</p>
-  <button class="yes" onclick="yesPage()">Okay Yes 😘</button>
+  <h1>Are you sure? 🥺</h1>
+  <p>
+    Some feelings don’t fade,<br>
+    they wait.
+  </p>
+  <button class="yes" onclick="yesPage()">Okay, Yes 💗</button>
   <button class="no" onclick="no2()">Still No 😅</button>
 </div>
 
 <!-- NO PAGE 2 -->
 <div class="container hidden" id="no2">
-  <img class="gif" src="https://media.tenor.com/6mQ7K3r2mWMAAAAi/bubu-dudu-cry.gif">
-  <h1>My heart is melting 💔</h1>
-  <p>Some stories are meant to be ours…</p>
+  <h1>One more chance 💔</h1>
+  <p>
+    Love knocked softly…<br>
+    just once more.
+  </p>
   <button class="yes" onclick="yesPage()">Yes ❤️</button>
   <button class="no" onclick="no3()">No 😜</button>
 </div>
 
 <!-- NO PAGE 3 -->
 <div class="container hidden" id="no3">
-  <img class="gif" src=" https://tenor.com/en-GB/view/bubu-dudu-valentine%27s-day-happy-valentine%27s-day-bubu-dudu-giving-flowers-bubu-roses-bubu-valentines-gif-8913949001921070369 ">
   <h1>No escape now 😏</h1>
-  <p>Come here… love already won 💞</p>
-  <button class="yes" onclick="yesPage()">Fine Yes 🥰</button>
+  <p>
+    This story already knows its ending.
+  </p>
+  <button class="yes" onclick="yesPage()">Fine, Yes 🥰</button>
 </div>
 
 <!-- YES PAGE -->
 <div class="container hidden" id="yesPage">
- 
   <h1>Happy Rose Day 🌹</h1>
 
   <img src="rose.jpg" alt="Bouquet">
 
   <p>
-    This bouquet is made of feelings,<br>
-    wrapped in patience, tied with love.<br><br>
+    This bouquet is not made of flowers,<br>
+    but of feelings I carry for you.<br><br>
 
-    I couldn’t give you a rose in my hands,<br>
-    so I give you my heart instead —<br>
-    blooming quietly for you.<br><br>
+    I couldn’t place a rose in your hands,<br>
+    so I placed my heart in your life.<br><br>
 
-    Distance fades,<br>
-    but love stays… always.
+    Distance may exist,<br>
+    but love always finds its way back.
   </p>
 
   <p style="font-size:22px; color:#ff4d88;">
-    <strong>I love you, babe 💖</strong>
+    <strong>I love you, babe ❤️</strong>
   </p>
 
+  <p><strong>Hugs and Kisses🥰😘</strong></p>
 </div>
 
 <script>
