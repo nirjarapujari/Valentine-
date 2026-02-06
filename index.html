@@ -68,7 +68,7 @@ img{
 .heart{
   position:fixed;
   bottom:-10px;
-  font-size:20px;
+  font-size:22px;
   animation:float 6s linear infinite;
   opacity:0.8;
 }
@@ -82,7 +82,7 @@ img{
 
 <body>
 
-<!-- MUSIC -->
+<!-- Background Music -->
 <audio autoplay loop>
   <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Komiku/Love/Komiku_-_12_-_Tenderness.mp3" type="audio/mpeg">
 </audio>
@@ -90,47 +90,53 @@ img{
 <!-- PAGE 1 -->
 <div class="container" id="page1">
   <h1>Will you be my Valentine? 💖</h1>
-  <p>Anil, yo mero mutu ko sawaal ho…</p>
+  <p>This is my heart asking you a question…</p>
   <button class="yes" onclick="yesPage()">Yes 💕</button>
   <button class="no" onclick="no1()">No 🙈</button>
 </div>
 
-<!-- NO 1 -->
+<!-- NO PAGE 1 -->
 <div class="container hidden" id="no1">
-  <h1>Sochera hera na 🥺</h1>
-  <p>Tme bina Valentine adhurai huncha…</p>
-  <button class="yes" onclick="yesPage()">Okay Yes 😘</button>
+  <h1>Are you sure? 🥺</h1>
+  <p>Some loves are worth choosing twice…</p>
+  <button class="yes" onclick="yesPage()">Okay, Yes 😘</button>
   <button class="no" onclick="no2()">Still No 😅</button>
 </div>
 
-<!-- NO 2 -->
+<!-- NO PAGE 2 -->
 <div class="container hidden" id="no2">
-  <h1>Last chance hai 😢</h1>
-  <p>Unlimited maya, care ani kisses free 💞</p>
-  <button class="yes" onclick="yesPage()">YES YES ❤️</button>
-  <button class="no" onclick="no3()">No (don’t be dramatic) 😜</button>
+  <h1>One more chance 💔</h1>
+  <p>This heart comes with forever…</p>
+  <button class="yes" onclick="yesPage()">Yes ❤️</button>
+  <button class="no" onclick="no3()">No 😜</button>
 </div>
 
-<!-- NO 3 -->
+<!-- NO PAGE 3 -->
 <div class="container hidden" id="no3">
-  <h1>Oops… trap ma paryau 😏</h1>
-  <p>No escape now, maya jitihalcha 💘</p>
-  <button class="yes" onclick="yesPage()">Fine Yes 🥰</button>
+  <h1>No escape now 😏</h1>
+  <p>Love always wins.</p>
+  <button class="yes" onclick="yesPage()">Fine, Yes 🥰</button>
 </div>
 
 <!-- YES PAGE -->
 <div class="container hidden" id="yesPage">
   <h1>Happy Rose Day 🌹</h1>
-  <h2>Nirjara ❤️ Anil</h2>
-  <img src="rose.jpg" alt="Rose Day">
+
+  <img src="rose.jpg" alt="My Bouquet">
+
   <p>
-    Ma timilai real rose dina sakdina,<br>
-    tara ma nai timro rose ho 🌹<br><br>
-    Distance le haamro haat chhutaula,<br>
-    tara mutu kaile chhutdaina 💕
+    This bouquet is not made of petals and thorns,<br>
+    it is made of all the feelings I carry for you.<br><br>
+
+    I couldn’t send you a real rose today,<br>
+    so I’m sending you my heart instead —<br>
+    every beat whispering your name.<br><br>
+
+    You are my rose,<br>
+    today, tomorrow, and always.
   </p>
-  <p><strong>I love you babe ❤️</strong></p>
-  <p>Forever yours, always & forever ♾️</p>
+
+  <p><strong>I love you, babe ❤️</strong></p>
 </div>
 
 <script>
@@ -162,12 +168,12 @@ function no3(){
   document.getElementById("no3").classList.remove("hidden");
 }
 
-/* hearts */
+/* Floating hearts effect */
 setInterval(()=>{
-  const heart=document.createElement("div");
-  heart.className="heart";
-  heart.innerHTML="💖";
-  heart.style.left=Math.random()*100+"vw";
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random()*100 + "vw";
   document.body.appendChild(heart);
   setTimeout(()=>heart.remove(),6000);
 },500);
