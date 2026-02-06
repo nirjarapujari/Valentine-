@@ -2,62 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nirjara ❤️ Anil</title>
+<title>Valentine Day </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
 body{
   margin:0;
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
   text-align:center;
-  color:white;
+  color:#5a2a60;
   overflow-x:hidden;
 }
 
 .container{
-  padding:30px 15px;
+  padding:35px 18px;
+  animation: fadeIn 1.2s ease;
 }
 
 h1{
-  font-size:30px;
+  font-family:'Pacifico', cursive;
+  font-size:36px;
+  color:#ff4d88;
 }
 
 p{
   font-size:18px;
-  line-height:1.7;
+  line-height:1.8;
+  color:#6b2f6b;
 }
 
 button{
-  padding:14px 28px;
+  padding:14px 30px;
   font-size:18px;
-  margin:8px;
+  margin:10px;
   border:none;
-  border-radius:30px;
+  border-radius:40px;
   cursor:pointer;
   transition:0.3s;
+  font-family:'Poppins', sans-serif;
 }
 
 .yes{
-  background:#ff4d6d;
+  background:#ff6fae;
   color:white;
+  box-shadow:0 8px 18px rgba(255,111,174,0.5);
 }
 
 .no{
   background:white;
-  color:#ff4d6d;
+  color:#ff6fae;
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
 
 button:hover{
-  transform:scale(1.08);
+  transform:scale(1.1);
 }
 
 img{
   width:85%;
-  max-width:320px;
-  border-radius:20px;
+  max-width:300px;
+  border-radius:25px;
   margin-top:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  box-shadow:0 12px 28px rgba(0,0,0,0.25);
+}
+
+.gif{
+  width:140px;
+  margin:15px;
+  animation:bounce 2s infinite;
 }
 
 .hidden{
@@ -69,83 +84,99 @@ img{
   position:fixed;
   bottom:-10px;
   font-size:22px;
-  animation:float 6s linear infinite;
+  animation:float 7s linear infinite;
   opacity:0.8;
 }
 
 @keyframes float{
   0%{transform:translateY(0); opacity:1;}
-  100%{transform:translateY(-100vh); opacity:0;}
+  100%{transform:translateY(-110vh); opacity:0;}
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Background Music -->
+<!-- soft romantic music -->
 <audio autoplay loop>
   <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Komiku/Love/Komiku_-_12_-_Tenderness.mp3" type="audio/mpeg">
 </audio>
 
 <!-- PAGE 1 -->
 <div class="container" id="page1">
-  <h1>Will you be my Valentine? 💖</h1>
-  <p>This is my heart asking you a question…</p>
-  <button class="yes" onclick="yesPage()">Yes 💕</button>
+  <img class="gif" src="https://media.tenor.com/7ZQ9p9zT6GAAAAAC/bubu-dudu-love.gif">
+  <h1>Will you be my Valentine? 💕</h1>
+  <button class="yes" onclick="yesPage()">Yes 🥰</button>
   <button class="no" onclick="no1()">No 🙈</button>
 </div>
 
 <!-- NO PAGE 1 -->
 <div class="container hidden" id="no1">
-  <h1>Are you sure? 🥺</h1>
-  <p>Some loves are worth choosing twice…</p>
-  <button class="yes" onclick="yesPage()">Okay, Yes 😘</button>
+  <img class="gif" src="https://media.tenor.com/F6pC2FJ2n8YAAAAi/bubu-dudu.gif">
+  <h1>Are you really sure? 🥺</h1>
+  <p>This love is gentle… but very stubborn 💗</p>
+  <button class="yes" onclick="yesPage()">Okay Yes 😘</button>
   <button class="no" onclick="no2()">Still No 😅</button>
 </div>
 
 <!-- NO PAGE 2 -->
 <div class="container hidden" id="no2">
-  <h1>One more chance 💔</h1>
-  <p>This heart comes with forever…</p>
+  <img class="gif" src="https://media.tenor.com/6mQ7K3r2mWMAAAAi/bubu-dudu-cry.gif">
+  <h1>My heart is melting 💔</h1>
+  <p>Some stories are meant to be ours…</p>
   <button class="yes" onclick="yesPage()">Yes ❤️</button>
   <button class="no" onclick="no3()">No 😜</button>
 </div>
 
 <!-- NO PAGE 3 -->
 <div class="container hidden" id="no3">
+  <img class="gif" src="https://media.tenor.com/QnQZzZk0NfIAAAAi/bubu-dudu-hug.gif">
   <h1>No escape now 😏</h1>
-  <p>Love always wins.</p>
-  <button class="yes" onclick="yesPage()">Fine, Yes 🥰</button>
+  <p>Come here… love already won 💞</p>
+  <button class="yes" onclick="yesPage()">Fine Yes 🥰</button>
 </div>
 
 <!-- YES PAGE -->
 <div class="container hidden" id="yesPage">
+  <img class="gif" src="https://media.tenor.com/0AVbKGY_MxMAAAAi/bubu-dudu-kiss.gif">
   <h1>Happy Rose Day 🌹</h1>
 
-  <img src="rose.jpg" alt="My Bouquet">
+  <img src="rose.jpg" alt="Bouquet">
 
   <p>
-    This bouquet is not made of petals and thorns,<br>
-    it is made of all the feelings I carry for you.<br><br>
+    This bouquet is made of feelings,<br>
+    wrapped in patience, tied with love.<br><br>
 
-    I couldn’t send you a real rose today,<br>
-    so I’m sending you my heart instead —<br>
-    every beat whispering your name.<br><br>
+    I couldn’t give you a rose in my hands,<br>
+    so I give you my heart instead —<br>
+    blooming quietly for you.<br><br>
 
-    You are my rose,<br>
-    today, tomorrow, and always.
+    Distance fades,<br>
+    but love stays… always.
   </p>
 
-  <p><strong>I love you, babe ❤️</strong></p>
+  <p style="font-size:22px; color:#ff4d88;">
+    <strong>I love you, babe 💖</strong>
+  </p>
+
+  <p><strong>Hugs and kisses🥰😘</strong></p>
 </div>
 
 <script>
 function hideAll(){
-  document.getElementById("page1").classList.add("hidden");
-  document.getElementById("no1").classList.add("hidden");
-  document.getElementById("no2").classList.add("hidden");
-  document.getElementById("no3").classList.add("hidden");
-  document.getElementById("yesPage").classList.add("hidden");
+  ["page1","no1","no2","no3","yesPage"].forEach(id=>{
+    document.getElementById(id).classList.add("hidden");
+  });
 }
 
 function yesPage(){
@@ -153,30 +184,19 @@ function yesPage(){
   document.getElementById("yesPage").classList.remove("hidden");
 }
 
-function no1(){
-  hideAll();
-  document.getElementById("no1").classList.remove("hidden");
-}
+function no1(){ hideAll(); document.getElementById("no1").classList.remove("hidden"); }
+function no2(){ hideAll(); document.getElementById("no2").classList.remove("hidden"); }
+function no3(){ hideAll(); document.getElementById("no3").classList.remove("hidden"); }
 
-function no2(){
-  hideAll();
-  document.getElementById("no2").classList.remove("hidden");
-}
-
-function no3(){
-  hideAll();
-  document.getElementById("no3").classList.remove("hidden");
-}
-
-/* Floating hearts effect */
+/* floating hearts */
 setInterval(()=>{
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "💖";
-  heart.style.left = Math.random()*100 + "vw";
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💗";
+  heart.style.left=Math.random()*100+"vw";
   document.body.appendChild(heart);
-  setTimeout(()=>heart.remove(),6000);
-},500);
+  setTimeout(()=>heart.remove(),7000);
+},600);
 </script>
 
 </body>
