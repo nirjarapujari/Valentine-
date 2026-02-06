@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  background:#ffc0cb;
+  text-align:center;
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:30px;
+}
+
+button{
+  padding:15px 30px;
+  font-size:20px;
+  margin:10px;
+  border-radius:25px;
+  border:none;
+  background:#ff4d6d;
+  color:white;
+}
+
+img{
+  width:80%;
+  max-width:300px;
+  border-radius:20px;
+  margin-top:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+p{
+  font-size:20px;
+}
+</style>
+
+<script>
+function yes(){
+  document.body.innerHTML =
+    "<h1>Happy Rose Day 🌹</h1>" +
+    "<img src='./rose.jpg' alt='Rose'>" +
+    "<p>I may not give you a real rose,<br>but I am your rose 🌹</p>" +
+    "<p><b>I love you babe ❤️</b></p>";
+}
+
+function no(){
+  document.body.innerHTML =
+    "<h1>Will you be my Valentine? 💕</h1>" +
+    "<p>Think again… my heart is waiting 💖</p>" +
+    "<button onclick='yes()'>Yes 🌹</button>" +
+    "<button onclick='no()'>No 🙈</button>";
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+<button onclick="yes()">Yes 🌹</button>
+<button onclick="no()">No 🙈</button>
+
+</body>
+</html>
